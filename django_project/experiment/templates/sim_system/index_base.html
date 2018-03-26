@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ 
+     {% load staticfiles %}
+     <link rel="stylesheet" type="text/css" href="{% static 'jq/jquery-1.12.4.min.js' %}" />
+     
+    <script type="text/javascript">
+        $(function(){
+            $("#add").click(function() {
+                $("#inputinfos").toggle();
+            });
+
+        })        
+    </script>
+</head>
+    <style>
+        .genal{
+
+        }
+        #inputinfos{
+            width: 300px;
+            margin: 20px auto;
+        }
+        #inputinfos  li {
+            /*list-style: none;*/
+            width: 250px;
+            position: relative;
+        }
+        #inputinfos input{
+            margin: 5px;
+            border-radius: 5px;
+            height: 15px;
+            padding: 2px;
+            float: none;
+            width: 100px;
+            
+        }
+
+        h1{
+            width: 300px;
+            margin: 0px auto;
+            color: greenyellow;
+        }
+        p,input{
+            float: left;
+            margin: 5px;
+			border-radius: 5px;
+			height: 30px;
+			font-size: 20px;
+			padding: 2px;
+        }
+        input{
+        	width: 150px;
+        }
+        .buttom {
+		    background-color: #4CAF50; /* Green */
+		    border: none;
+		    color: white;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    padding: 5px 10px;
+		    border-radius: 5px;
+  		    height: 34px;
+			margin:5px 15px;
+
+			width: 100px;
+		}
+
+        .getInfos{
+            width: 600px;
+            margin: 20px auto;
+            padding: 0px;
+            text-align: center;
+        }
+    </style>
+<body>
+
+<h1>学生信息管理系统</h1>
+
+
+<div class="getInfos">
+    <p>请输入学号:</p>
+    <form action="selection" method="post">
+    {% csrf_token %}
+    <input type="text" name="stu_no" >
+    <input type="submit" value="查询" class="buttom">
+    </form>
+    <form action="selection" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="stu_no">
+    <input type="submit" value="查询所有" class="buttom">
+    </form>
+</div>
+<button type="submit" class="buttom" id="add">添加</button>
+
+{% block selection%}
+<div id="inputinfos">
+<form action="addInfos" method="post">
+    {% csrf_token %}
+    <ul>
+        <li>学号:<input type="text" name="num"></li>
+        <li>姓名:<input type="text" name="name"></li>
+        <li>性别:男<input type="radio" name="gender" style="width:20px;line-height: 15px">女
+        <input type="radio" name="gender" style="width:20px;line-height: 15px"></li>
+        <li>职务:<input type="text" name="duty"></li>
+        <li>年龄:<input type="text" name="age"></li>
+<!--         <li>科目名称:<input type="text" name="subname"></li>
+        <li>分数:<input type="text" name="score"></li> -->
+        <button class="buttom" type="submit" name="input" >提交</button>
+    </ul>
+</form>
+</div>
+{%endblock%}
+
+</html>

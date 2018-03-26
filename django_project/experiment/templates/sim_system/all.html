@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button ><a href="stusys">返回</a></button>
+	{% for stu in allstudents %}
+<ul>
+	{{stu.stu_name}}的信息如下:
+	<li>学号:{{stu.stu_no}}</li>
+	<li>性别:{{stu.stu_gerder}}</li>
+	<li>年龄:{{stu.stu_age}}</li>
+	<li>职务:{{stu.stu_duty}}</li>
+</ul>
+	{% endfor %}
+
+</body>
+</html>

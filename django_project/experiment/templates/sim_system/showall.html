@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+{%for i in allinfos%}
+    学号:{{i.stu_no}}<br>
+    姓名:{{i.stu_name}}<br>
+    {% ifequal i.stu_gender 1 %}
+    性别:男
+    {% endifequal %}
+
+    {% ifnotequal i.stu_gender 1 %}
+    性别:女
+    {% endifnotequal %}
+    <hr>
+{%endfor%}
+
+
+
+</body>
+</html>
