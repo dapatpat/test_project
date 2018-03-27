@@ -1,0 +1,17 @@
+@import "reset";
+
+html, body {
+	font-family: Helvetica, Arial, Tahoma, Sans-serif;
+}
+
+::-webkit-scrollbar {
+    display:none
+}
+
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}

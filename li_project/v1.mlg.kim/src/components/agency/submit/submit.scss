@@ -1,0 +1,320 @@
+.index-mobile {
+  background-color:#fff;
+  @mixin wh($w:100%,$h:80px) {
+    width:$w;
+    height:$h;
+  }
+  @mixin mg($t:0px,$r:0px,$b:0px,$l:0px) {
+    margin-top:$t;
+    margin-right:$r;
+    margin-bottom:$b;
+    margin-left:$l;
+  }
+  @mixin pd($t:0px,$r:0px,$b:0px,$l:0px) {
+    padding-top:$t;
+    padding-right:$r;
+    padding-bottom:$b;
+    padding-left:$l;
+  }
+  .bannar-warp{
+    .icon{
+      color:white;
+      width: 10%;
+      position: absolute;
+      top: 0;
+      left:3%;
+      i{
+        font-size:20px;
+      }
+    }
+    .message{
+      position:absolute;
+      z-index:3;
+      top:-4px;
+      right:22px;
+      i{
+        font-size:22px;
+      }
+    }
+    position:relative;
+    box-shadow:0 2px 4px #ea6556;
+    text-align:center;
+    width:100%;
+    height:44px;
+    background-color:#ea6556;
+    div{
+      @include pd(10px);
+      color:white;
+    }
+  }
+  .title-text {
+    .back-btn{
+      display:inline-block;
+      width:10%;
+    }
+    .demand{
+      display:inline-block;
+      width:85%;
+    }
+    @include wh(100%, 40px);
+    color:#ea6556;
+    background-color:#ffffff;
+    div {
+      text-align:center;
+      @include mg(12px)
+    }
+  }
+  .bannar-swap {
+    @include mg(12px);
+    background-color:#ffffff;
+    width:100%;
+    .respond {
+      width:32%;
+      display:inline-block;
+      text-align:center;
+    }
+    .seek, .finsh {
+      @extend .respond
+    }
+  }
+  .contain-line {
+    @include mg(15px);
+    @include wh(100%, 4px);
+    background: linear-gradient(#f8ebe9, #f9f4f3);
+  }
+  .content-modular{
+    .payment{
+      border:1px solid #ea6556;
+      height:44px;
+      @include mg(30px);
+      position:relative;
+      .payment-left{
+        display:inline-block;
+        width:50%;
+        color:#ea6556;
+        text-align:center;
+        height:44px;
+        span{
+          display:inline-block;
+          margin-top:8px;
+        }
+      }
+      .payment-right{
+        height:44px;
+        display:inline-block;
+        width:50%;
+        text-align:center;
+        background-color:#ea6556;
+        color:white;
+        position:absolute;
+        span{
+          display:inline-block;
+          margin-top:8px;
+        }
+      }
+    }
+    .rules{
+      @include mg(10px,0,10px,0);
+      position:relative;
+      color:#666;
+      .rules-left{
+        @include mg(0,0,0,15px);
+        .iconfont{
+          color:#ea6556 ;
+          font-size:20px;
+        }
+      }
+      .rules-right{
+        display:inline-block;
+        position:absolute;
+        top:0;
+        left:40px;
+      }
+    }
+    .iconfont{
+      font-size:18px;
+    }
+    .sureBtn{
+      @include mg(45px);
+      box-shadow:0 0 0 ;
+      text-align:center;
+      color:#fff;
+      background-color:#ea6556;
+      @include wh(100%,40px);
+    }
+    .division{
+      width:90%;
+      left:5%;
+      position:relative;
+      height:1px;
+      background-color:#e5e5e5;
+    }
+    .buy-number{
+      .number-left{
+        padding-top:2px;
+      }
+      @include mg(10px,0,10px,0);
+      position:relative;
+      color:#999;
+      .number-right{
+        span{
+          font-size:16px;
+          margin-right:5px;
+        }
+        color:#333;
+        position:absolute;
+        display:inline-block;
+        top:0;
+        right:5%;
+        .contact-phone{
+          text-align:right;
+          border:0;
+          outline:none;
+          width:150px;
+        }
+        .ch-time{
+          -webkit-appearance: none;
+          border:0;
+          height:30px;
+          background-color:white;
+        }
+        .subtrac,.number,.add,.Classifier{
+          position:relative;
+          display:inline-block;
+          @include mg(0,0,0,0);
+          .iconfont{
+            font-size:18px;
+            color:#ea6556;
+          }
+          .ticks{
+            display:none;
+            position:absolute;
+            top:0;
+            right:2px;
+          }
+          .tick{
+            font-size:1px;
+            color:#ea6556;
+          }
+        }
+      }
+      .number-left{
+        @include mg(0,0,0,5%)
+      }
+    }
+    @include pd(12px,$b:12px);
+    @include mg(5px);
+    position:relative;
+    background-color:#ffffff;
+    .describe{
+      color:#999;
+      @include mg(1px,0,60px,15px)
+    }
+    .pic-a{
+      display:inline-block;
+      width:20%;
+      @include mg(0,2%,0,15px);
+      img{
+        width:100%;
+      }
+    }
+    .pic-b,.pic-c,.pic-d{
+      @extend .pic-a
+    }
+    .pic-d{
+      width:5%;
+    }
+    .content-text{
+      color:#999;
+      @include mg(12px,0,15px);
+      font-size:10px;
+    }
+    .modular-line{
+      @include wh(100%,10px);
+      background-color:#fafafa;
+
+    }
+    .modular-edit{
+      @include mg(12px);
+      position:relative;
+      .sent-time{
+        display:inline-block;
+        font-size:12px;
+        top:12px;
+        left:0;
+        color:#666;
+      }
+      .btn-area{
+        width:60%;
+        display:inline-block;
+        position:absolute;
+        right:-5px;
+        .cancel-btn,.edit-btn,.contact-btn{
+          width: 31%;
+          display:inline-block;
+        }
+        .edit-btn{
+          color:#999
+        }
+        .contact-btn{
+          color:#333;
+        }
+
+        .btn{
+          font-size:12px;
+          border-radius:40px;
+          width:99%;
+          height:22px;
+          @include pd($t:2px)
+        }
+        .btn-style{
+          color:#ffffff;
+          background-color:#ea6556;
+          border:1px solid  #ea6556   ;
+        }
+      }
+    }
+  }
+
+  .sec-btn{
+    background-color:#ea6556;
+    color:#FFFFFF;
+    border:1px solid #ea6556;
+  }
+  .seek-btn{
+    border:1px solid #999999;
+  }
+  .dis{
+    display:none;
+  }
+  .banner-clolr-a{
+    color:#333333;
+  }
+  .banner-clolr-b{
+    color:#ea6556;
+  }
+  .feedback-btn{
+    color:#ea6556;
+    background-color:#FFFFFF;
+    border:1px solid #ea6556;
+  }
+  .pafeedback-btn{
+    position:absolute;
+    right:0;
+  }
+  .finsh-feedback-btn{
+    border:1px solid #999;
+    color:#333333;
+  }
+  .bannar-warp{
+    .message{
+      position:absolute;
+      z-index:3;
+      top:-4px;
+      right:22px;
+      i{
+        font-size:22px;
+      }
+    }
+  }
+}

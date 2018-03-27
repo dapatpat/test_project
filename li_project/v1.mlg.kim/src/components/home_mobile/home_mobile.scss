@@ -1,0 +1,94 @@
+@import url(../../../static/lib/swiper/swiper.min.css);
+
+.index-mobile{
+    @mixin wh($w:100%,$h:80px){
+        width:$w;
+        height:$h;
+
+    }
+    @mixin mg($t:0px,$r:0px,$b:0px,$l:0px){
+        margin-top:$t;
+        margin-right:$r;
+        margin-bottom:$b;
+        margin-left:$l;
+    }
+    @mixin pd($t:0px,$r:0px,$b:0px,$l:0px){
+        padding-top:$t;
+        padding-right:$r;
+        padding-bottom:$b;
+        padding-left:$l;
+    }
+    .bannar-warp{
+        .message{
+            position:absolute;
+            z-index:3;
+            top:-4px;
+            right:22px;
+            i{
+                font-size:22px;
+            }
+        }
+        position:relative;
+        box-shadow:0 4px 16px #ea6556;
+        text-align:center;
+        width:100%;
+        height:44px;
+        background-color:#ea6556;
+        div{
+            @include pd(10px);
+            color:white;
+        }
+    }
+    .car{
+        @include mg(14px, 8px, 0, 8px);
+        img{
+            width:100%;
+        }
+    }
+    .fabric{
+        position:relative;
+        @include mg(8px, 8px, 0, 8px);
+        background-color:#ff9c91;
+        height:40px;
+        .fabric-line{
+            position:absolute;
+            left:25%;
+            top:20px;
+            background-color:white;
+            @include wh(50%, 1px);
+            @include mg();
+            @include pd()
+        }
+        .fabric-title{
+            color:white;
+            background-color:#ff9c91;
+            height:20px;
+            width:20%;
+            position:absolute;
+            left:40%;
+            top:9px;
+            text-align:center;
+        }
+    }
+    .fabric-content{
+        position:relative;
+        @include mg(8px,8px,0x,8px);
+        .collection{
+            width:48%;
+            img{
+                width:100%;
+            }
+        }
+        .look{
+            position:absolute;
+            width:48%;
+            right:0;
+            top:0;
+            img{width:100%}
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: 200px;
+    }
+}
